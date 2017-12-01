@@ -9,3 +9,7 @@ RUN apt-get update -qqy && apt-get -qqyy install \
     google-chrome-stable \
   && rm -rf /var/lib/apt/lists/*
 
+#Install Openjdk 8
+RUN sh -c 'echo "deb http://ftp.debian.org/debian jessie-backports main" >> /etc/apt/sources.list.d/backports.list'
+RUN apt-get update
+RUN apt-get install -y --no-install-recommends -t jessie-backports openjdk-8-jdk-headless
