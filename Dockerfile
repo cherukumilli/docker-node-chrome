@@ -1,6 +1,4 @@
-ARG CHROME_DRIVER_VERSION=2.33
 FROM selenium/standalone-chrome
-ARG CHROME_DRIVER_VERSION
 LABEL maintainer "Diwakar Cherukumilli"
 
 ENV REFRESHED_AT 2017-11-30
