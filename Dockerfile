@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM node:6
 
 LABEL maintainer "Diwakar Cherukumilli"
 
@@ -25,6 +25,6 @@ RUN CHROME_FILE=`which google-chrome` && \
 #     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" && \
 #     nvm install --lts=boron
 
-RUN apt-get install -y curl xvfb git && \
-    curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - && \
-    sudo apt-get install -y nodejs
+# RUN apt-get install -y curl xvfb git && \
+#     curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - && \
+#     sudo apt-get install -y nodejs
